@@ -1,0 +1,102 @@
+:root {
+  --cor-primaria: rgb(10, 99, 167);
+  --cor-secundaria: rgb(94, 172, 94);
+  --cor-terciaria: rgb(176, 22, 22);
+  --cor-amarelo: rgb(220, 204, 26);
+
+  --cor-preta: #000;
+  --cor-branca: #FFF;
+  --cor-cinza-claro: #EEE;
+  --cor-cinza-escuro: #222;
+  --cor-cinza-medio: #888;
+}
+
+.full-width { width: 100%; }
+.full-height { height: 100vh; }
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;   
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}  
+
+.card {
+  margin: 10px 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 0 5px #7777;
+  background-color: #f5eeee;
+}
+
+.card-header {
+  background-color: var(--cor-cinza-medio);
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 0 5px #7777;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.botao-detalhar {
+  padding: 1px 3px;
+  margin: 2px;
+  border: 1px solid #aaaa;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: var(--cor-cinza-medio);
+}
+
+
+.nav-item {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.panel {
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.panel.panel-blue {
+  border: 1px solid #0087FF;
+  background-color: #DDEDFF;
+  color: #0087FF;
+}
+.panel.panel-yellow {
+  border: 1px solid #FFBD00;
+  background-color: #FEF0B2;
+  color: #FFBD00;
+}
+.panel.panel-pink {
+  border: 1px solid #F84F7F;
+  background-color: #FAD2E1;
+  color: #F84F7F;
+}
+.panel.panel-purple {
+  border: 1px solid #fc7900;
+  background-color: #ffad61;
+  color: #000000;
+}
+
+#messages-error {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index:9999;
+    border-radius:0px
+}
+
+.help-block {
+    color: rgb(255, 0, 0);
+}

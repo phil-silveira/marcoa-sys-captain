@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Configurações
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    {% for farm in farmProperty %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-blue">Propriedade Rural
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-purple">
+                            <p>Nome: {{ farm.description }}</p>
+                            <p>Endereço: {{ farm.address }}</p>
+                            <p>Cidade: {{ farm.city }}</p>
+                            <p>Estado: {{ farm.state }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-purple">
+                            <p>Email: {{ farm.email }}</p>
+                            <p>Telefone: {{ farm.phone }}</p>
+                            <p>CNPJ: {{ farm.num_doc }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="panel panel-blue">Gerência
+                {% for ger in personGer %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-purple">
+                            <p>Nome: {{ ger.name }}</p>
+                            <p>E-mail: {{ ger.email }}</p>
+                            <p>Telefone: {{ ger.phone }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="panel panel-blue">Responsável Técnico
+                {% for tec in personTec %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-purple">
+                            <p>Nome: {{ tec.name }}</p>
+                            <p>E-mail: {{ tec.email }}</p>
+                            <p>Telefone: {{ tec.phone }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

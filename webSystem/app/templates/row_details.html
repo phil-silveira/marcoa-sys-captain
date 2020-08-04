@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Detalhes da linha
+{% endblock title %}
+
+
+
+<script>
+{% block jquery %}
+
+//console.log({{ row.id }})
+//console.log({{ valueStatus }})
+var rowId = {{ row.id }}
+
+var endpointTemp = '/api/weatherData/getTempsPerRow/' + rowId + '/'
+var endpointConsum = '/api/weatherData/getConsumPerRow/' + rowId + '/'
+var endpointAvgDailyConsum = '/api/weatherData/getAvgDailyConsumPerRow/' + rowId + '/'
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos de TEMPERATURA da API
+$.ajax({
+    method: "GET",
+    url: endpointTemp,
+    success: function(data){
+        setChartTemp(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos de CONSUMO da API
+$.ajax({
+    method: "GET",
+    url: endpointConsum,
+    success: function(data){
+        setChartConsum(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos da Media do CONSUMO da API
+$.ajax({
+    method: "GET",
+    url: endpointAvgDailyConsum,
+    success: function(data){
+        setChartAvgDailyConsum(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+{% endblock %}
+</script>
+
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="p-3 mb-2 bg-secondary text-white">
+                    <span>
+                        Detalhes da {{row.description}}
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h5 class="card-header">Ajustes</h5>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">
+                            <div class="panel">
+                                <p class="text-uppercase font-weight-bold">Temperatura ambiente:  <span class="text-success text-right font-weight-bold">{{ valueEnvTemp }}˚C </span></p>
+                                <p class="text-uppercase font-weight-bold">Temperatura observada:  <span class="text-success text-right font-weight-bold">{{ valueTemp }}˚C </span></p>
+                                <p class="text-uppercase font-weight-bold">Temperatura programada:  <span class="text-success text-right font-weight-bold">{{ valueProgTemp }}˚C </span></p>
+                                <p class="text-uppercase font-weight-bold">Status da linha:
+                                {% if valueStatus == 0 %}
+                                    <span class="text-danger text-uppercase text-right font-weight-bold">desligada</span></p>
+                                {% else %}
+                                    <span class="text-success text-uppercase text-right font-weight-bold">ligada</span></p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        {% if request.user.is_staff %}
+                        <div class="col">
+                            <div class="panel">
+                                <!--#####################################################################-->
+                                <!-- Faz o controle para o tipo de usuario acessar essa area -->
+                                    <p>
+                                        <button type="button" class="btn btn-primary btn-block js-ajust-temp-new" data-url="{% url 'ajust_temp_new' pk=row.id %}">
+                                            <span class=""></span>Ajustar Temperatura
+                                        </button>
+                                    </p>
+
+                                    <p>
+                                        <button type="button" class="btn btn-primary btn-block js-ajust-status-new" data-url="{% url 'ajust_status_new' pk=row.id %}">
+                                            <span class=""></span>Ajustar Status
+                                        </button>
+                                    </p>
+                                <!--#####################################################################-->
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h5 class="card-header">Histórico das Temperaturas (Ambiente x Observada x Programada)</h5>
+                    <canvas id="chartTemp" width="200" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+
+        {% if request.user.username == 'admin' %}
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h5 class="card-header">Consumo de Energia</h5>
+                    <canvas id="chartConsum" width="200" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h5 class="card-header">Consumo Médio Diário de Energia</h5>
+                    <canvas id="chartAvgDailyConsum" width="200" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <!-- THE MODAL WE WILL BE USING -->
+    <div class="modal fade" id="modal-ajust-temp-new">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-ajust-status-new">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock %}

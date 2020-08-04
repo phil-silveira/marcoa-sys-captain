@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Listagem de Linhas
+{% endblock title %}
+
+{% block content %}
+<div id="auto" class="row">
+    {% for row in list %}
+        {% if row.state == 1 %}
+            <div class="col-xs-6 col-md-4">
+                <div class="card">
+                    <h5 class="card-header">{{row.description}} - Temperatura (˚C)</h5>
+                    <!--<img class="card-img-top" src="{% static 'img/gauge.png' %}" width="100" height="200" alt="Card image cap">!-->
+                    <canvas id="myChart-{{ forloop.counter }}" class="piechart"></canvas>
+                    <p class="text-center font-weight-bold" style="font-size: 0.7rem"><span id="datetime-{{ forloop.counter }}"></span></p>
+                    <a href="{% url 'row_details' pk=row.pk %}" class="btn botao-detalhar btn-sm">Detalhar</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    $(document).ready( function(){
+        readTempDinamic();
+        refresh();
+    });
+</script>
+{% endblock %}

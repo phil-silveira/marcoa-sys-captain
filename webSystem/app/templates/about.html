@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Sobre
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">WSTK - Thermal Control System</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Sistema de Monitoramento e Controle para piso aquecido</h6>
+                    <p class="card-text">
+                        <p>
+                            O <b><i>WSTK - Thermal Control System</i></b> é um sistema que foi projetado e desenvolvido pelas empresas
+                        MarcoA e GKW Agro Tech. A <a href="https://www.marcoa.net.br/" target="_blank">MarcoA Sistemas de Aquecimento</a> é uma empresa especializada em projeto,
+                        fabricação e instalação de cabos de aquecimento para pisos. A <a href="https://www.facebook.com/GKW-Agro-Tech-197476014153734/" target="_blank">GKW Agro Tech</a> é uma empresa especializada
+                        no desenvolvimento de soluções em tecnologia da informação para o Agronegócio.
+                        </p>
+                        <p>
+                            O WSTK surgiu a partir da necessidade do mercado de um sistema inovador para o monitoramento e
+                        controle de ambientes que possuem piso aquecido. Este sistema é moderno, especializado e inteligente
+                        que suporta o gerenciamento de temperatura individual para cada ambiente a partir de smartphones,
+                        tablets ou computadores propiciando assim total conforto e economia real de energia elétrica para
+                        seu usuário.
+                        </p>
+                        <p>
+                            Todos os direiros reservados. 2019©
+                        </p>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="card-img center-block" src="{% static 'img/logo.png' %}" alt="Imagem de capa do card">
+                            <img class="card-img center-block" src="{% static 'img/logogkw.png' %}" alt="Imagem de capa do card">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

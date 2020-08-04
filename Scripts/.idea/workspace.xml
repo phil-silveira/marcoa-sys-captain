@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed4fbbb6-55be-4117-8d20-d3ad1f70ce68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../webSystem/app/templates/rows_list_qc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicializaRow.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../montaEstrutura.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../montaEstrutura.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rowSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rowSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rowSystem/publish1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../rowSystem/publish1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rowSystem/publish2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../rowSystem/publish2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rowSystem/subscribe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rowSystem/system/system.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../rowSystem/system/system.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/static/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/static/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/static/libs/publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/static/libs/publish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/templates/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/templates/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/templates/row_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/templates/row_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/templates/rows_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/templates/rows_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webSystem/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../webSystem/app/views.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1424278080">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1304" />
+    <option name="y" value="23" />
+    <option name="width" value="1256" />
+    <option name="height" value="745" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Scripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed4fbbb6-55be-4117-8d20-d3ad1f70ce68" name="Default Changelist" comment="" />
+      <created>1572631407791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572631407791</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1304" y="23" width="1256" height="745" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

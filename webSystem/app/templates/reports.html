@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Relatórios
+{% endblock title %}
+
+<script>
+{% block jquery %}
+
+var endpointTemp = '/api/weatherData/getAll/1/'
+var endpointDimming = '/api/weatherData/getAll/2/'
+var endpointStatusEsp = '/api/weatherData/getAll/3/'
+var endpointTension = '/api/weatherData/getAll/4/'
+var endpointCurrent = '/api/weatherData/getAll/5/'
+var endpointPotency = '/api/weatherData/getAll/6/'
+var endpointConsum = '/api/weatherData/getAll/7/'
+var endpointProgTemp = '/api/weatherData/getAll/8/'
+var endpointEnvTemp = '/api/weatherData/getAll/9/'
+var endpointAvgDailyConsum = '/api/weatherData/getAll/10/'
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos de TEMPERATURA da API
+$.ajax({
+    method: "GET",
+    url: endpointTemp,
+    success: function(data){
+        setChartReportTemp(data)
+
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos de TEMPERATURA PROGRAMADA da API
+$.ajax({
+    method: "GET",
+    url: endpointProgTemp,
+    success: function(data){
+        setChartReportProgTemp(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos de TEMPERATURA AMBIENTE da API
+$.ajax({
+    method: "GET",
+    url: endpointEnvTemp,
+    success: function(data){
+        setChartReportEnvTemp(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos do CONSUMO da API
+$.ajax({
+    method: "GET",
+    url: endpointConsum,
+    success: function(data){
+        setChartReportConsum(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+
+/* ############################################################################# */
+// Código para obter os dados meteorologicos da Media do CONSUMO da API
+$.ajax({
+    method: "GET",
+    url: endpointAvgDailyConsum,
+    success: function(data){
+        setChartReportAvgDailyConsum(data)
+    },
+    error: function(error_data){
+        console.log("error")
+        console.log(error_data)
+    }
+})
+/* ############################################################################# */
+
+{% endblock %}
+</script>
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">Temperatura Observada para Todos os Ambientes (˚C)</h5>
+                <canvas id="chartTempReport" width="100" height="40"></canvas>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">Temperatura Programada para Todos os Ambientes (˚C)</h5>
+                <canvas id="chartProgTempReport" width="100" height="40"></canvas>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">Temperatura Ambiente no Quadro de Comando (˚C)</h5>
+                <canvas id="chartEnvTempReport" width="100" height="40"></canvas>
+            </div>
+        </div>
+
+        {% if request.user.username == 'admin' %}
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">Consumo de energia para Todos os Ambientes (Watts)</h5>
+                <canvas id="chartConsumReport" width="100" height="40"></canvas>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">Consumo Médio Diário de Energia para Todos os Ambientes (Watts)</h5>
+                <canvas id="chartAvgDailyConsumReport" width="100" height="40"></canvas>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

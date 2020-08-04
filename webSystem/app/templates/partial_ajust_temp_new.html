@@ -1,0 +1,17 @@
+<script>
+  console.log({{row}})
+
+</script>
+<form method="post" action="{% url 'ajust_temp_new' pk=row %}" class="js-ajust-temp-new-form">
+  {% csrf_token %}
+  <div class="modal-header">
+    <h4 class="modal-title">Ajustar Nova Temperatura</h4>
+  </div>
+  <div class="modal-body">
+    {% include 'partial_ajust_temp_new_form.html' %}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+    <button type="submit" class="btn btn-primary">Ajustar</button>
+  </div>
+</form>

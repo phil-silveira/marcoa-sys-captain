@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Listagem de Linhas
+{% endblock title %}
+
+{% block content %}
+<div id="auto" class="row">
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Linha</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Temperatura Programada</th>
+                    <th scope="col">Temperatura Observada</th>
+                    <th scope="col">Temperatura Ambiente</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in list %}
+                    <tr>
+                        <th scope="row">{{row.description}}</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <a href="{% url 'row_details' pk=row.pk %}" class="btn botao-detalhar btn-sm">Detalhar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    $(document).ready( function(){
+        readTempDinamic();
+        refresh();
+    });
+</script>
+{% endblock %}
